@@ -60,3 +60,4 @@ For at gøre det lydlige udtryk mere dialogisk anvendes noget old-school compute
 
 - https://www.youtube.com/watch?v=eVW0FD9g_Sk
 - https://www.growingcodesign.com/
+- https://www.instagram.com/growingcodesign/
