@@ -61,3 +61,4 @@ For at gøre det lydlige udtryk mere dialogisk anvendes noget old-school compute
 - https://www.youtube.com/watch?v=eVW0FD9g_Sk
 - https://www.growingcodesign.com/
 - https://www.instagram.com/growingcodesign/
+- https://mikemorenoaudio.wordpress.com/2016/09/06/first-blog-post-formant-filters-with-pd-pt-1/
