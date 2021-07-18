@@ -2,7 +2,9 @@
 
 Denne patch skal udgøre en plantes voiceboks i et forsøg på at etablere en dialogisk forbindelse mellem det humane og det non-humane. I patchen anvendes subpatches; [pd ArduinoReceive], [pd DataSmoother], [pd DataScaler]. Disse subpatches ses illustreret og beskrevet gennem denne readme.
 
-![PlantVoiceBox](./media/PlantVoiceBox.png)
+![plantvoicebox_v1.1](./media/plantvoicebox_v1.1.png)
+
+https://vimeo.com/manage/videos/576381533
 
 ## Externals PD
 
