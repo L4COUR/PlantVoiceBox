@@ -1,4 +1,4 @@
-#N canvas 147 22 1262 768 12;
+#N canvas 86 22 1323 856 12;
 #N canvas 357 112 490 748 ArduinoRecieve 0;
 #X obj 154 166 comport 0 9600;
 #X msg 44 97 devices;
@@ -106,9 +106,9 @@
 #X text 883 49 A0 DataRaw;
 #X text 861 104 smoothValue;
 #X text 785 167 A0 Data;
-#X obj 375 725 *~;
-#X obj 322 756 dac~ 1 2;
-#X text 401 726 forstærker;
+#X obj 425 703 *~;
+#X obj 372 734 dac~ 1 2;
+#X text 451 704 forstærker;
 #X floatatom 934 284 5 0 0 0 - - -;
 #N canvas 0 22 450 300 DataScaler 0;
 #X msg 215 140 0;
@@ -148,12 +148,12 @@
 #X obj 669 185 change;
 #X obj 669 215 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 669 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 669 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 767 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 767 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 562 707 line~;
-#X floatatom 669 527 5 0 0 0 - - -;
+#X obj 574 679 line~;
+#X floatatom 759 507 5 0 0 0 - - -;
 #X floatatom 669 153 5 0 0 0 - - -;
 #N canvas 0 22 507 548 DataSmoother 0;
 #X floatatom 194 73 5 0 0 0 - - -;
@@ -200,21 +200,21 @@
 #X restore 669 120 pd DataSmoother;
 #X floatatom 771 90 5 0 0 0 - - -;
 #X obj 669 350 &&;
-#X obj 749 349 &&;
+#X obj 749 302 &&;
 #X obj 669 300 != 1;
-#X obj 731 405 ||;
-#X obj 731 438 != 1;
-#X obj 731 466 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 731 358 ||;
+#X obj 731 391 != 1;
+#X obj 731 419 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 669 396 ||;
 #X obj 669 431 != 1;
-#X obj 669 502 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 759 482 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 731 362 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 731 315 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 742 382 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 742 335 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 749 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 749 273 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 669 274 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -223,12 +223,12 @@
 -1;
 #X obj 636 -2 sel 0;
 #X msg 636 463 0;
-#X text 127 751 Audiodesign;
-#X text 92 735 Frederik la Cour;
+#X text 981 660 Audiodesign;
+#X text 946 644 Frederik la Cour;
 #X text 476 446 Growing CoDesign;
 #X text 364 462 https://www.growingcodesign.com/;
-#X text 29 767 https://github.com/L4COUR;
-#X text 385 757 Audio Output;
+#X text 883 676 https://github.com/L4COUR;
+#X text 435 735 Audio Output;
 #X text 372 442 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓;
 #X text 358 430 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ;
@@ -264,15 +264,15 @@
 #X text 358 179 ░░▒▒▒▒░░░░ ░░░░▒▒▒▒░░
 ;
 #X text 380 167 ░░▒▒░░░░ ░░▒▒░░░░;
-#X text 391 156 ░░░░░░░░ ░░░░;
-#X text 391 143 ░░░░;
+#X text 390 155 ░░░░░░░░ ░░░░;
+#X text 390 142 ░░░░;
 #X floatatom 29 126 5 0 0 0 - - -;
 #X floatatom 270 592 5 0 0 0 - - -;
 #X floatatom 125 128 6 0 0 0 - - -;
 #X floatatom 177 128 6 0 0 0 - - -;
 #X obj 232 151 line~;
 #X obj 236 77 hsl 128 15 0 0.2 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 0 1;
+-1 -1 1270 1;
 #X floatatom 232 102 5 0 0 0 - - -;
 #X msg 232 125 \$1 50;
 #X obj 29 151 phasor~ 229;
@@ -429,11 +429,11 @@
 #X restore 115 270 pd simpleVowels;
 #X obj 407 357 loadbang;
 #X obj 66 477 vsl 15 128 235 850 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6092 1;
-#X obj 138 479 vsl 15 128 595 2400 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 8760 1;
-#X obj 208 477 vsl 15 128 60 2160 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 12700 1;
+#X obj 138 479 vsl 15 128 595 2400 0 0 empty empty empty 0 -9 0 10
+-262144 -1 -1 7142 1;
+#X obj 208 477 vsl 15 128 60 2160 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4233 1;
 #X obj 66 449 line;
 #X msg 66 420 \$1 \$2;
 #X obj 66 394 pack f f;
@@ -450,20 +450,20 @@
 #X msg 45 242 5;
 #X obj 66 319 unpack f f f;
 #X msg 944 78 5;
-#X obj 715 543 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 805 523 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 715 517 sel 1;
-#X obj 715 563 random 26;
-#X obj 715 622 line;
-#X msg 715 593 \$1 400;
-#X obj 562 649 cyclone/pak;
+#X obj 805 497 sel 1;
+#X obj 805 543 random 26;
+#X obj 805 602 line;
+#X msg 805 573 \$1 400;
+#X obj 574 621 cyclone/pak;
 #X text 234 54 Open close mouth;
 #X msg 289 514 25;
 #X msg 270 539 2;
-#X msg 562 677 \$1 \$2;
-#X floatatom 636 623 5 0 0 0 - - -;
-#X obj 636 564 random 400;
-#X obj 636 593 + 100;
+#X msg 574 649 \$1 \$2;
+#X floatatom 726 603 5 0 0 0 - - -;
+#X obj 726 544 random 400;
+#X obj 726 573 + 100;
 #X floatatom 860 330 8 0 0 0 - - -;
 #X obj 860 260 env~ 4096;
 #X obj 860 196 noise~;
