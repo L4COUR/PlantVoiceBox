@@ -6,6 +6,8 @@ Denne patch skal udgøre en plantes voiceboks i et forsøg på at etablere en di
 
 https://vimeo.com/manage/videos/576381533
 
+En version af PD sketchen kan køres gennem BELA boardet, se [PlantVoiceBox_BELA](https://github.com/L4COUR/PlantVoiceBox_Bela)
+
 ## Externals PD
 
 Derudover anvendes pure data externals der skal downloades for at patchen kan fungere.
@@ -52,6 +54,25 @@ afhængigt af hvilken plante, sensor, etc. kan det analoge input variere og derf
 For at gøre det lydlige udtryk mere dialogisk anvendes noget old-school computer memory logik som en måde at aktivere en envelope der medvirker til at det lydlige udtryk går fra en drone til en mere rytmisk udtryk.
 
 ![DataLatchEnvelopeTrigger](./media/DataLatchEnvelopeTrigger.png)
+
+## Reflections
+
+Growing CoDesign is post-humanism. more-than-human research projekt. its involves codesign and critical anthropomorphism. At its core the projekt evolves around inviting plants to become co-designers in creative practices.
+
+recent findings reveals plants to be highly sentient beings that are capable of communicating through three different methods: chemical volatiles, release of photo-hormones and electrical signals. The technology that is used in Growing CoDesign makes use of the electrical signals. Read more about the projekt in detail here: https://www.growingcodesign.com/research
+
+The sensory technology used in the projekt is an EMG muscle sensor that can precisely measure fluctuations in microVolts of muscle tissue and apparently also the electrical signals monitored by attaching electrodes on the plants leaves.
+
+This creates a fluctuating analog signal that can be read by a microcontroller. While some of this data will be interpreted visually and displayed using a raspberry pi with a small screen, I have tried to create a system that interprets the signals from the plants sonically.
+
+Sonification of plants is not at all unfamiliar to me, I first encounter a eurorack module made by Instruó that would also make use of EMG technology and read the signals from the plant and convert them to CV for controlling other parameters in the synth https://www.gearnews.com/generate-cv-plants-scion-biometric-feedback-module/. I also found that Gate Wardenær worked on a projekt that was concerned with sonifying plants through Pure Data, a very interesting read https://mct-master.github.io/audio-programming/2020/02/11/plant-interface.html.
+However both of these projects and especially the pure data one interprets the plants signals as the classic new age blip blop sounds with a lot of reverb, sound almost more like the plant is playing or singing a piece of music. Thor Magnussons thoughts on the interrelated relationship between instrument and composition comes to mind, but is this really appropriate for a project like Growing CoDesign? I did not want to do a sonic interpretation of graph data, and I also didn’t want to make something that would sound like music or an instrument, I wanted to give the plants a voice. I thus view my approach as a critical anthropomorphic sonification.
+
+In the pure data patch there is a heavy use af generative composition principles accompanied by machine listening. the other crucial part of this critical anthropomorphic sonification is the heavy use of formant synthesis. Formant synthesis uses DSP code to simulate the human voice and all the biological attributes that shapes the voice like mouth, tongue, nose etc. even though this form of synthesis is very human centred due to its inherently artificial and imitative nature I believe it is especially apropriate for giving plants a voice and make them a part of creative human to plant codesign processes.
+
+The sonic expression that the system provides intersects human voice aspects and the artificial synthetic. Due to the generative and machine listening aspects the system gains a certain degree of autonomy that supports the sonic expressions as a plant language with characteristics that are closer to our own language, thus potentially giving the workshop participants engaged with the plants another modality for interpretation in the creative proces.
+
+it would be interesting to test weather it makes a difference whether the plant is utilising the formant synthesis or bleep bloop sounds? is it easier for us humans to relate to plants if there signals are represented as sounds emitted from systems mimicking our own voice producing organs?
 
 ## Future Work
 
