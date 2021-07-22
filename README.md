@@ -71,6 +71,10 @@ void draw(){
 }
 ```
 
+Going from Arduino serial to OSC communication meant that a few elements in the main code had to change in order for sonic expressivity to manifest as intended. The DataSmoothing needed to be much higher in order for the stream of untamed data to become usable numbers for the formant synthesis functionality. This means that depending on the data coming in via OSC the datasmoother can interpolate this data to usable data by the pure data patch.
+
+![Datasmooth_parameter](./media/Datasmooth_parameter.png)
+
 ## DataSmoothing
 
 for at gøre det analoge input mere anvendeligt køres signalet gennem en DataSmoother. Således gøres det meget omskiftlige signal mere roligt.
