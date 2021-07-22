@@ -6,6 +6,7 @@ Denne patch skal udgøre en plantes voiceboks i et forsøg på at etablere en di
 
 https://player.vimeo.com/video/576381533
 
+
 En version af PD sketchen kan køres gennem BELA boardet, se [PlantVoiceBox_BELA](https://github.com/L4COUR/PlantVoiceBox_Bela)
 
 ## Externals PD
@@ -27,7 +28,7 @@ I min udviklings proces hard jeg anvendt en LDR for at simulere det analoge inpu
 
 ![ArduinoCode](./media/ArduinoCode.png)
 
-For at forbinde Arduino til Pure Data anvendes objektet [comport 0 9600] ved at trykke på comport knappen, vil en liste af arduino com-porte blive vist i pd's konsol. Ud for hver com-port vises et index-nr. 
+For at forbinde Arduino til Pure Data anvendes objektet [comport 0 9600] ved at trykke på comport knappen, vil en liste af arduino com-porte blive vist i pd's konsol. Ud for hver com-port vises et index-nr.
 
 ![AvailableComports](./media/AvailableComports.png)
 
@@ -43,7 +44,7 @@ During the proces of working with the Growing-CoDesign project, we realised that
 
 [PlantVoiceBox/PureData/PlantVoiceVox_OSC_controlled.pd](https://github.com/L4COUR/PlantVoiceBox/blob/main/PureData/PlantVoiceBox_OSC_controlled.pd)
 
-in order to implement this functionality further externals /net & /osc had to be installed in pure data. 
+in order to implement this functionality further externals /net & /osc had to be installed in pure data.
 
 ![OSC-Communication](./media/OSC-Communication.png)
 
@@ -58,7 +59,7 @@ OscP5 oscP5;
 
 void setup(){
   oscP5 = new OscP5(this,12000);
-  
+
   //Addressen som der sendes til. Jeg går ud fra at denne skal bruges i PureData
   remote = new NetAddress("127.0.0.1",1234);
 }
@@ -66,7 +67,7 @@ void setup(){
 void draw(){
   //Navnet på OSC beskeden
   OscMessage msg = new OscMessage("/sensor-data");
-  
+
   //Til denne sketch sender jeg et tilfældigt tal mellem 300 og 500 for at imitere plantesensoren.
   msg.add(floor(random(300, 500)));
   oscP5.send(msg,remote);
