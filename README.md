@@ -41,6 +41,8 @@ fra [pd ArduinoReceive]-objektet outputtes alle analoge outlets fra Arduino.
 
 During the proces of working with the Growing-CoDesign project, we realised that the pure data patch wouldnt be able to access the serial communication because this was being used by a processing sketch handling some of the visual aspects of the project. apparently two programs cant connect to the same serial port and extract the data. this meant that we had to come up with an alternative way of receiving the data. instead of getting the data directly from the sensors on the plant the data would need to be send through processing and then finally transmittet to pure data via Open Sound Control.
 
+[PlantVoiceBox/PureData/PlantVoiceVox_OSC_controlled.pd](https://github.com/L4COUR/PlantVoiceBox/blob/main/PureData/PlantVoiceBox_OSC_controlled.pd)
+
 in order to implement this functionality further externals /net & /osc had to be installed in pure data. 
 
 ![OSC-Communication](./media/OSC-Communication.png)
