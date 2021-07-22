@@ -37,6 +37,40 @@ Her er min comport nr. 21 /dev/tty.usbmodem1421. For at åbne comporten i pureda
 
 fra [pd ArduinoReceive]-objektet outputtes alle analoge outlets fra Arduino.
 
+## OSC-Connection
+
+During the proces of working with the Growing-CoDesign project, we realised that the pure data patch wouldnt be able to access the serial communication because this was being used by a processing sketch handling some of the visual aspects of the project. apparently two programs cant connect to the same serial port and extract the data. this meant that we had to come up with an alternative way of receiving the data. instead of getting the data directly from the sensors on the plant the data would need to be send through processing and then finally transmittet to pure data via Open Sound Control.
+
+in order to implement this functionality further externals /net & /osc had to be installed in pure data. 
+
+![OSC-Communication](./media/OSC-Communication.png)
+
+In order to test the OSC connection and adjust the sonic parameters we used some simple processing code for generating a random number between 300 and 500 that would simulate the data coming from the plant.
+
+```java
+import oscP5.*;
+import netP5.*;
+
+NetAddress remote;
+OscP5 oscP5;
+
+void setup(){
+  oscP5 = new OscP5(this,12000);
+  
+  //Addressen som der sendes til. Jeg går ud fra at denne skal bruges i PureData
+  remote = new NetAddress("127.0.0.1",1234);
+}
+
+void draw(){
+  //Navnet på OSC beskeden
+  OscMessage msg = new OscMessage("/sensor-data");
+  
+  //Til denne sketch sender jeg et tilfældigt tal mellem 300 og 500 for at imitere plantesensoren.
+  msg.add(floor(random(300, 500)));
+  oscP5.send(msg,remote);
+}
+```
+
 ## DataSmoothing
 
 for at gøre det analoge input mere anvendeligt køres signalet gennem en DataSmoother. Således gøres det meget omskiftlige signal mere roligt.
