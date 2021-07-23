@@ -98,11 +98,15 @@ For at gøre det lydlige udtryk mere dialogisk anvendes noget old-school compute
 
 ## Reflections
 
+![GrowingCoDesign](./media/GrowingCoDesign.jpeg)
+
 Growing CoDesign is post-humanism. more-than-human research projekt. its involves codesign and critical anthropomorphism. At its core the projekt evolves around inviting plants to become co-designers in creative practices.
 
 recent findings reveals plants to be highly sentient beings that are capable of communicating through three different methods: chemical volatiles, release of photo-hormones and electrical signals. The technology that is used in Growing CoDesign makes use of the electrical signals. Read more about the projekt in detail here: https://www.growingcodesign.com/research
 
-The sensory technology used in the projekt is an EMG muscle sensor that can precisely measure fluctuations in microVolts of muscle tissue and apparently also the electrical signals monitored by attaching electrodes on the plants leaves.
+![EMG-Sensor-GrowingCoDesign](./media/EMG-Sensor-GrowingCoDesign.jpeg)
+
+The sensory technology used in the projekt is an [EMG muscle sensor](https://www.kiwi-electronics.nl/grove-emc-detector?lang=en&gclid=Cj0KCQjwub-HBhCyARIsAPctr7wWmOdYp6fSh97zfVKGF7NSLT_dZL9DOzBvdT99DQZ8P2HVStmJXOMaAmOZEALw_wcB) that can precisely measure fluctuations in microVolts of muscle tissue and apparently also the electrical signals monitored by attaching electrodes on the plants leaves.
 
 This creates a fluctuating analog signal that can be read by a microcontroller. While some of this data will be interpreted visually and displayed using a raspberry pi with a small screen, I have tried to create a system that interprets the signals from the plants sonically.
 
@@ -110,6 +114,8 @@ Sonification of plants is not at all unfamiliar to me, I first encounter a euror
 However both of these projects and especially the pure data one interprets the plants signals as the classic new age blip blop sounds with a lot of reverb, sound almost more like the plant is playing or singing a piece of music. Thor Magnussons thoughts on the interrelated relationship between instrument and composition comes to mind, but is this really appropriate for a project like Growing CoDesign? I did not want to do a sonic interpretation of graph data, and I also didn’t want to make something that would sound like music or an instrument, I wanted to give the plants a voice. I thus view my approach as a critical anthropomorphic sonification.
 
 In the pure data patch there is a heavy use af generative composition principles accompanied by machine listening. the other crucial part of this critical anthropomorphic sonification is the heavy use of formant synthesis. Formant synthesis uses DSP code to simulate the human voice and all the biological attributes that shapes the voice like mouth, tongue, nose etc. even though this form of synthesis is very human centred due to its inherently artificial and imitative nature I believe it is especially apropriate for giving plants a voice and make them a part of creative human to plant codesign processes.
+
+![GrowingCoDesignPlantWave](./media/GrowingCoDesignPlantWave.jpeg)
 
 The sonic expression that the system provides intersects human voice aspects and the artificial synthetic. Due to the generative and machine listening aspects the system gains a certain degree of autonomy that supports the sonic expressions as a plant language with characteristics that are closer to our own language, thus potentially giving the workshop participants engaged with the plants another modality for interpretation in the creative proces.
 
