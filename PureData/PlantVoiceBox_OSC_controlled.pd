@@ -1,4 +1,4 @@
-#N canvas 273 188 929 856 12;
+#N canvas 273 22 929 856 12;
 #X floatatom 842 172 5 0 0 0 - - -;
 #X floatatom 842 54 5 0 0 0 - - -;
 #N canvas 0 22 507 548 DataSmoother 0;
@@ -90,7 +90,7 @@
 #X obj 669 190 change;
 #X obj 669 220 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 669 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 669 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 767 248 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -150,7 +150,7 @@
 1;
 #X obj 669 401 ||;
 #X obj 669 436 != 1;
-#X obj 759 487 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 759 487 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 731 320 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -211,7 +211,7 @@
 #X floatatom 177 128 6 0 0 0 - - -;
 #X obj 232 151 line~;
 #X obj 236 77 hsl 128 15 0 0.2 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 208 1;
+-1 -1 1270 1;
 #X floatatom 232 102 5 0 0 0 - - -;
 #X msg 232 125 \$1 50;
 #X obj 29 151 phasor~ 229;
@@ -368,9 +368,9 @@
 #X restore 115 270 pd simpleVowels;
 #X obj 407 357 loadbang;
 #X obj 66 477 vsl 15 128 235 850 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1861 1;
+-1 -1 4233 1;
 #X obj 138 479 vsl 15 128 595 2400 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 2192 1;
+-262144 -1 -1 2990 1;
 #X obj 208 477 vsl 15 128 60 2160 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 12700 1;
 #X obj 66 449 line;
@@ -425,14 +425,14 @@
 #X obj 971 203 + 0.2;
 #X text 25 -27 PlantVoiceBox_v1.1;
 #X text 53 -11 18th July 2021;
-#X obj 842 -29 net/udpreceive 1234;
-#X text 946 -1 dependencies : /net & /osc libraries;
-#X obj 842 27 osc/routeOSC /sensor-data;
-#X obj 842 0 osc/unpackOSC;
 #X msg 944 83 164;
 #X text 983 109 Anvend smoothValue til at gøre rawData mere medgølig
 ;
 #X obj 764 63 random 140;
+#X obj 842 -60 netreceive -u -b -f 1234;
+#X obj 842 -29 oscparse /sensor-data;
+#X obj 842 -1 list trim;
+#X obj 842 28 route sensor-data;
 #X connect 0 0 11 0;
 #X connect 0 0 13 0;
 #X connect 1 0 2 0;
@@ -476,7 +476,7 @@
 #X connect 34 0 27 0;
 #X connect 35 0 25 0;
 #X connect 36 0 26 0;
-#X connect 37 0 151 0;
+#X connect 37 0 147 0;
 #X connect 69 0 77 0;
 #X connect 70 0 84 4;
 #X connect 71 0 78 0;
@@ -502,7 +502,7 @@
 #X connect 92 0 107 0;
 #X connect 92 0 108 0;
 #X connect 92 0 109 0;
-#X connect 92 0 149 0;
+#X connect 92 0 145 0;
 #X connect 92 0 131 0;
 #X connect 93 0 84 1;
 #X connect 94 0 84 2;
@@ -559,8 +559,9 @@
 #X connect 140 0 138 0;
 #X connect 141 0 139 0;
 #X connect 142 0 135 0;
-#X connect 145 0 148 0;
-#X connect 147 0 1 0;
-#X connect 148 0 147 0;
-#X connect 149 0 3 0;
-#X connect 151 0 23 0;
+#X connect 145 0 3 0;
+#X connect 147 0 23 0;
+#X connect 148 0 149 0;
+#X connect 149 0 150 0;
+#X connect 150 0 151 0;
+#X connect 151 0 1 0;
