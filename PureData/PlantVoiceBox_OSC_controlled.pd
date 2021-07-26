@@ -1,4 +1,4 @@
-#N canvas 275 22 1131 856 12;
+#N canvas 548 74 1131 856 12;
 #X floatatom 842 172 5 0 0 0 - - -;
 #X floatatom 842 54 5 0 0 0 - - -;
 #N canvas 0 22 507 548 DataSmoother 0;
@@ -59,7 +59,7 @@
 -1 -1;
 #X obj 669 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 767 248 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 767 248 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 574 684 line~;
 #X floatatom 574 600 5 0 0 0 - - -;
@@ -113,13 +113,13 @@
 #X obj 669 305 != 1;
 #X obj 731 363 ||;
 #X obj 731 396 != 1;
-#X obj 731 424 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 731 424 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 669 401 ||;
 #X obj 669 436 != 1;
-#X obj 668 495 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 668 495 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 731 320 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 731 320 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 742 340 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -176,7 +176,7 @@
 #X floatatom 177 128 6 0 0 0 - - -;
 #X obj 232 151 line~;
 #X obj 236 77 hsl 128 15 0 0.2 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 1270 1;
+-1 -1 635 1;
 #X floatatom 232 102 5 0 0 0 - - -;
 #X msg 232 125 \$1 50;
 #X obj 29 151 phasor~ 229;
@@ -333,11 +333,11 @@
 #X restore 115 270 pd simpleVowels;
 #X obj 403 350 loadbang;
 #X obj 66 477 vsl 15 128 235 850 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7228 1;
+-1 -1 10222 1;
 #X obj 138 479 vsl 15 128 595 2400 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 7845 1;
+-262144 -1 -1 3483 1;
 #X obj 208 477 vsl 15 128 60 2160 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6441 1;
+-1 -1 12700 1;
 #X obj 66 449 line;
 #X msg 66 420 \$1 \$2;
 #X obj 66 394 pack f f;
@@ -380,7 +380,7 @@
 #X obj 842 -29 oscparse /sensor-data;
 #X obj 842 -1 list trim;
 #X obj 842 28 route sensor-data;
-#X msg 293 -15 \; pd dsp 1;
+#X msg 293 12 \; pd dsp 1;
 #X obj 293 -46 loadbang;
 #X floatatom 859 357 5 0 0 0 - - -;
 #X obj 859 329 line;
@@ -402,10 +402,11 @@
 -1 -1;
 #X msg 163 46 \$1 1000;
 #X obj 668 -26 cyclone/counter 230;
-#X msg 368 -16 \; pd dsp 0;
+#X msg 368 11 \; pd dsp 0;
 #X obj 588 -26 random 250;
 #X obj 589 -54 loadbang;
 #X obj 859 242 random 450;
+#X obj 293 -18 delay 100;
 #X connect 0 0 138 1;
 #X connect 0 0 148 0;
 #X connect 1 0 2 0;
@@ -515,7 +516,7 @@
 #X connect 127 0 128 0;
 #X connect 128 0 129 0;
 #X connect 129 0 1 0;
-#X connect 131 0 130 0;
+#X connect 131 0 153 0;
 #X connect 132 0 65 0;
 #X connect 133 0 132 0;
 #X connect 134 0 133 0;
@@ -539,3 +540,4 @@
 #X connect 150 0 143 0;
 #X connect 151 0 150 0;
 #X connect 152 0 145 0;
+#X connect 153 0 130 0;
