@@ -57,9 +57,9 @@
 #X obj 669 190 change;
 #X obj 669 220 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 669 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 669 247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 767 248 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 767 248 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 574 684 line~;
 #X floatatom 574 600 5 0 0 0 - - -;
@@ -176,7 +176,7 @@
 #X floatatom 177 128 6 0 0 0 - - -;
 #X obj 232 151 line~;
 #X obj 236 77 hsl 128 15 0 0.2 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 857 1;
+-1 -1 1270 1;
 #X floatatom 232 102 5 0 0 0 - - -;
 #X msg 232 125 \$1 50;
 #X obj 29 151 phasor~ 229;
@@ -333,11 +333,11 @@
 #X restore 115 270 pd simpleVowels;
 #X obj 403 350 loadbang;
 #X obj 66 477 vsl 15 128 235 850 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4761 1;
+-1 -1 7228 1;
 #X obj 138 479 vsl 15 128 595 2400 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 6867 1;
+-262144 -1 -1 7845 1;
 #X obj 208 477 vsl 15 128 60 2160 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9033 1;
+-1 -1 6441 1;
 #X obj 66 449 line;
 #X msg 66 420 \$1 \$2;
 #X obj 66 394 pack f f;
@@ -387,7 +387,7 @@
 #X msg 859 300 \$1 1000;
 #X msg 944 83 127;
 #X obj 669 97 gate;
-#X obj 669 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 669 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 789 126 gate;
 #X floatatom 668 8 5 0 0 0 - - -;
