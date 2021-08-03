@@ -104,7 +104,7 @@
 #X floatatom 176 209 6 0 0 0 - - -;
 #X obj 231 232 line~;
 #X obj 234 158 hsl 128 15 0 0.2 0 0 empty empty empty -2 -8 0 10 -228856
--1 -1 635 1;
+-1 -1 0 1;
 #X floatatom 231 183 5 0 0 0 - - -;
 #X msg 231 206 \$1 50;
 #X obj 28 232 phasor~ 229;
@@ -261,11 +261,11 @@
 #X restore 114 351 pd simpleVowels;
 #X obj 407 434 loadbang;
 #X obj 65 558 vsl 15 128 235 850 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4532 1;
+-1 -1 0 1;
 #X obj 137 560 vsl 15 128 595 2400 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 8013 1;
+-262144 -1 -1 0 1;
 #X obj 207 558 vsl 15 128 60 2160 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7695 1;
+-1 -1 0 1;
 #X obj 65 530 line;
 #X msg 65 501 \$1 \$2;
 #X obj 65 475 pack f f;
@@ -1848,6 +1848,8 @@
 #X text 117 33 30th July 2021;
 #X text 1119 356 Idle Plant Threshold;
 #X text 1000 372 Des højere værdi des mere snaksagelig;
+#X msg 1285 362 60;
+#X obj 1285 336 loadbang;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -2004,3 +2006,5 @@
 #X connect 161 0 160 1;
 #X connect 162 0 118 0;
 #X connect 163 0 118 0;
+#X connect 168 0 131 0;
+#X connect 169 0 168 0;
